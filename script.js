@@ -142,5 +142,10 @@ document.addEventListener('DOMContentLoaded', () => {
         updateBagDisplay();
     }
 
+    // Ensure the bag display updates on bag.html page load
+    if (window.location.pathname.includes('bag.html')) {
+        document.addEventListener('DOMContentLoaded', updateBagDisplay);
+    }
+
     updateBagUI();
 });
