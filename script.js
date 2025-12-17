@@ -30,6 +30,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Function to update the bag display
     function updateBagDisplay() {
+        const bagItemsContainer = document.querySelector('.bag-items');
+        const totalItemsElement = document.getElementById('total-items');
+        const totalPriceElement = document.getElementById('total-price');
+
+        // Fetch the latest bag data from localStorage
+        const bag = JSON.parse(localStorage.getItem('bag')) || [];
+        console.log('Updating bag display with items:', bag);
+
         if (!bagItemsContainer) return;
 
         bagItemsContainer.innerHTML = '';
