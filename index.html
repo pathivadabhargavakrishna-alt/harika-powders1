@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="header-container">
+    
+    <!-- LEFT -->
+    <div class="header-left">
+      <img src="images/logo1.jpeg" alt="Harika Powders Logo" class="logo">
+    </div>
+
+    <!-- CENTER -->
+    <div class="header-center">
+      <a href="index.html" class="home-link">Home</a>
+    </div>
+
+    <!-- RIGHT -->
+    <div class="header-right">
+      <a href="bag.html" class="bag-icon">
+        🛒 <span id="cart-count">0</span>
+      </a>
+    </div>
+
+  </div>
+</header>
+
+    <main>
+        <section class="hero">
+            <h1>Welcome to Harika Millet Powders</h1>
+            <p>Your one-stop shop for healthy millets</p>
+        </section>
+        <section class="products">
+            <h2>Healthy Millets</h2>
+            <div class="product-list">
+                <div class="product-item">
+                    <img src="images/logo.jpeg" alt="Product Logo" class="product-logo">
+                    <h3>Mixed Millet</h3>
+                    <p>Rich in nutrients and perfect for a balanced diet.</p>
+                    <p>Price: ₹150 (1kg), ₹80 (500g)</p>
+                    <label for="weight-mixed-millet">Select Weight:</label>
+                    <select id="weight-mixed-millet" class="weight-select">
+                        <option value="1kg-150">1kg - ₹150</option>
+                        <option value="500g-80">500g - ₹80</option>
+                    </select>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product-item">
+                    <img src="images/logo.jpeg" alt="Product Logo" class="product-logo">
+                    <h3>Raggi</h3>
+                    <p>Great source of calcium and strengthens bones.</p>
+                    <p>Price: ₹60 (1kg), ₹40 (500g)</p>
+                    <label for="weight-raggi">Select Weight:</label>
+                    <select id="weight-raggi" class="weight-select">
+                        <option value="1kg-60">1kg - ₹60</option>
+                        <option value="500g-40">500g - ₹40</option>
+                    </select>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product-item">
+                    <img src="images/logo.jpeg" alt="Product Logo" class="product-logo">
+                    <h3>Sajjulu</h3>
+                    <p>Boosts energy and improves digestion.</p>
+                    <p>Price: ₹70 (1kg), ₹40 (500g)</p>
+                    <label for="weight-sajjulu">Select Weight:</label>
+                    <select id="weight-sajjulu" class="weight-select">
+                        <option value="1kg-70">1kg - ₹70</option>
+                        <option value="500g-40">500g - ₹40</option>
+                    </select>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product-item">
+                    <img src="images/logo.jpeg" alt="Product Logo" class="product-logo">
+                    <h3>Jonnalu</h3>
+                    <p>Rich in fiber and supports heart health.</p>
+                    <p>Price: ₹80 (1kg), ₹60 (500g)</p>
+                    <label for="weight-jonnalu">Select Weight:</label>
+                    <select id="weight-jonnalu" class="weight-select">
+                        <option value="1kg-80">1kg - ₹80</option>
+                        <option value="500g-60">500g - ₹60</option>
+                    </select>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product-item">
+                    <img src="images/logo.jpeg" alt="Product Logo" class="product-logo">
+                    <h3>Korralu</h3>
+                    <p>Helps in weight management and boosts immunity.</p>
+                    <p>Price: ₹80 (1kg), ₹45 (500g)</p>
+                    <label for="weight-korralu">Select Weight:</label>
+                    <select id="weight-korralu" class="weight-select">
+                        <option value="1kg-80">1kg - ₹80</option>
+                        <option value="500g-45">500g - ₹45</option>
+                    </select>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product-item">
+                    <img src="images/logo.jpeg" alt="Product Logo" class="product-logo">
+                    <h3>Samallu</h3>
+                    <p>Rich in antioxidants and supports digestion.</p>
+                    <p>Price: ₹120 (1kg), ₹70 (500g)</p>
+                    <label for="weight-samallu">Select Weight:</label>
+                    <select id="weight-samallu" class="weight-select">
+                        <option value="1kg-120">1kg - ₹120</option>
+                        <option value="500g-70">500g - ₹70</option>
+                    </select>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product-item">
+                    <img src="images/logo.jpeg" alt="Product Logo" class="product-logo">
+                    <h3>Udhallu</h3>
+                    <p>Low in calories and high in fiber.</p>
+                    <p>Price: ₹120 (1kg), ₹80 (500g)</p>
+                    <label for="weight-udhallu">Select Weight:</label>
+                    <select id="weight-udhallu" class="weight-select">
+                        <option value="1kg-120">1kg - ₹120</option>
+                        <option value="500g-80">500g - ₹80</option>
+                    </select>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product-item">
+                    <img src="images/logo.jpeg" alt="Product Logo" class="product-logo">
+                    <h3>Arkellu</h3>
+                    <p>Improves digestion and boosts energy levels.</p>
+                    <p>Price: ₹120 (1kg), ₹70 (500g)</p>
+                    <label for="weight-arkellu">Select Weight:</label>
+                    <select id="weight-arkellu" class="weight-select">
+                        <option value="1kg-120">1kg - ₹120</option>
+                        <option value="500g-70">500g - ₹70</option>
+                    </select>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product-item">
+                    <img src="images/logo.jpeg" alt="Product Logo" class="product-logo">
+                    <h3>Razja</h3>
+                    <p>Rich in protein and supports muscle growth.</p>
+                    <p>Price: ₹180 (1kg), ₹100 (500g)</p>
+                    <label for="weight-razja">Select Weight:</label>
+                    <select id="weight-razja" class="weight-select">
+                        <option value="1kg-180">1kg - ₹180</option>
+                        <option value="500g-100">500g - ₹100</option>
+                    </select>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+
+            <h2>Millet Flours</h2>
+            <div class="product-list">
+                <div class="product-item">
+                    <img src="images/logo.jpeg" alt="Product Logo" class="product-logo">
+                    <h3>Mixed Millet Flour</h3>
+                    <p>Price: ₹160 (1kg), ₹90 (500g)</p>
+                    <label for="weight-mixed-millet-flour">Select Weight:</label>
+                    <select id="weight-mixed-millet-flour" class="weight-select">
+                        <option value="1kg-160">1kg - ₹160</option>
+                        <option value="500g-90">500g - ₹90</option>
+                    </select>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product-item">
+                    <img src="images/logo.jpeg" alt="Product Logo" class="product-logo">
+                    <h3>Raggi Flour</h3>
+                    <p>Price: ₹70 (1kg), ₹40 (500g)</p>
+                    <label for="weight-raggi-flour">Select Weight:</label>
+                    <select id="weight-raggi-flour" class="weight-select">
+                        <option value="1kg-70">1kg - ₹70</option>
+                        <option value="500g-40">500g - ₹40</option>
+                    </select>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product-item">
+                    <img src="images/logo.jpeg" alt="Product Logo" class="product-logo">
+                    <h3>Sajjulu Flour</h3>
+                    <p>Price: ₹80 (1kg), ₹50 (500g)</p>
+                    <label for="weight-sajjulu-flour">Select Weight:</label>
+                    <select id="weight-sajjulu-flour" class="weight-select">
+                        <option value="1kg-80">1kg - ₹80</option>
+                        <option value="500g-50">500g - ₹50</option>
+                    </select>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product-item">
+                    <img src="images/logo.jpeg" alt="Product Logo" class="product-logo">
+                    <h3>Jonnalu Flour</h3>
+                    <p>Price: ₹90 (1kg), ₹50 (500g)</p>
+                    <label for="weight-jonnalu-flour">Select Weight:</label>
+                    <select id="weight-jonnalu-flour" class="weight-select">
+                        <option value="1kg-90">1kg - ₹90</option>
+                        <option value="500g-50">500g - ₹50</option>
+                    </select>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product-item">
+                    <img src="images/logo.jpeg" alt="Product Logo" class="product-logo">
+                    <h3>Korralu Flour</h3>
+                    <p>Price: ₹90 (1kg), ₹50 (500g)</p>
+                    <label for="weight-korralu-flour">Select Weight:</label>
+                    <select id="weight-korralu-flour" class="weight-select">
+                        <option value="1kg-90">1kg - ₹90</option>
+                        <option value="500g-50">500g - ₹50</option>
+                    </select>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product-item">
+                    <img src="images/logo.jpeg" alt="Product Logo" class="product-logo">
+                    <h3>Samallu Flour</h3>
+                    <p>Price: ₹130 (1kg), ₹80 (500g)</p>
+                    <label for="weight-samallu-flour">Select Weight:</label>
+                    <select id="weight-samallu-flour" class="weight-select">
+                        <option value="1kg-130">1kg - ₹130</option>
+                        <option value="500g-80">500g - ₹80</option>
+                    </select>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product-item">
+                    <img src="images/logo.jpeg" alt="Product Logo" class="product-logo">
+                    <h3>Udhallu Flour</h3>
+                    <p>Price: ₹130 (1kg), ₹90 (500g)</p>
+                    <label for="weight-udhallu-flour">Select Weight:</label>
+                    <select id="weight-udhallu-flour" class="weight-select">
+                        <option value="1kg-130">1kg - ₹130</option>
+                        <option value="500g-90">500g - ₹90</option>
+                    </select>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product-item">
+                    <img src="images/logo.jpeg" alt="Product Logo" class="product-logo">
+                    <h3>Arkellu Flour</h3>
+                    <p>Price: ₹130 (1kg), ₹70 (500g)</p>
+                    <label for="weight-arkellu-flour">Select Weight:</label>
+                    <select id="weight-arkellu-flour" class="weight-select">
+                        <option value="1kg-130">1kg - ₹130</option>
+                        <option value="500g-70">500g - ₹70</option>
+                    </select>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product-item">
+                    <img src="images/logo.jpeg" alt="Product Logo" class="product-logo">
+                    <h3>Razja Flour</h3>
+                    <p>Price: ₹200 (1kg), ₹110 (500g)</p>
+                    <label for="weight-razja-flour">Select Weight:</label>
+                    <select id="weight-razja-flour" class="weight-select">
+                        <option value="1kg-200">1kg - ₹200</option>
+                        <option value="500g-110">500g - ₹110</option>
+                    </select>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product-item">
+                    <img src="images/logo.jpeg" alt="Product Logo" class="product-logo">
+                    <h3>Flex Seeds Flour</h3>
+                    <p>Price: ₹200 (1kg), ₹110 (500g)</p>
+                    <label for="weight-flex-seeds-flour">Select Weight:</label>
+                    <select id="weight-flex-seeds-flour" class="weight-select">
+                        <option value="1kg-200">1kg - ₹200</option>
+                        <option value="500g-110">500g - ₹110</option>
+                    </select>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product-item">
+                    <img src="images/logo.jpeg" alt="Product Logo" class="product-logo">
+                    <h3>Chanaga Flour</h3>
+                    <p>Price: ₹160 (1kg), ₹80 (500g)</p>
+                    <label for="weight-chanaga-flour">Select Weight:</label>
+                    <select id="weight-chanaga-flour" class="weight-select">
+                        <option value="1kg-160">1kg - ₹160</option>
+                        <option value="500g-80">500g - ₹80</option>
+                    </select>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product-item">
+                    <img src="images/logo.jpeg" alt="Product Logo" class="product-logo">
+                    <h3>Ulaavalu</h3>
+                    <p>Price: ₹250 (1kg), ₹130 (500g)</p>
+                    <label for="weight-ulaavalu">Select Weight:</label>
+                    <select id="weight-ulaavalu" class="weight-select">
+                        <option value="1kg-250">1kg - ₹250</option>
+                        <option value="500g-130">500g - ₹130</option>
+                    </select>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product-item">
+                    <img src="images/logo.jpeg" alt="Product Logo" class="product-logo">
+                    <h3>Pasara Flour</h3>
+                    <p>Price: ₹250 (1kg), ₹130 (500g)</p>
+                    <label for="weight-pasara-flour">Select Weight:</label>
+                    <select id="weight-pasara-flour" class="weight-select">
+                        <option value="1kg-250">1kg - ₹250</option>
+                        <option value="500g-130">500g - ₹130</option>
+                    </select>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product-item">
+                    <img src="images/logo.jpeg" alt="Product Logo" class="product-logo">
+                    <h3>Atta</h3>
+                    <p>Price: ₹80 (1kg), ₹45 (500g)</p>
+                    <label for="weight-atta">Select Weight:</label>
+                    <select id="weight-atta" class="weight-select">
+                        <option value="1kg-80">1kg - ₹80</option>
+                        <option value="500g-45">500g - ₹45</option>
+                    </select>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+
+        </section>
+        <section class="products">
+            <h2>Millet Rava</h2>
+            <div class="product-list">
+                <div class="product-item">
+                    <img src="images/logo.jpeg" alt="Product Logo" class="product-logo">
+                    <h3>Mixed Millet Rava</h3>
+                    <p>Price: ₹170 (1kg), ₹95 (500g)</p>
+                    <label for="weight-mixed-millet-rava">Select Weight:</label>
+                    <select id="weight-mixed-millet-rava" class="weight-select">
+                        <option value="1kg-170">1kg - ₹170</option>
+                        <option value="500g-95">500g - ₹95</option>
+                    </select>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product-item">
+                    <img src="images/logo.jpeg" alt="Product Logo" class="product-logo">
+                    <h3>Raggi Rava</h3>
+                    <p>Price: ₹80 (1kg), ₹55 (500g)</p>
+                    <label for="weight-raggi-rava">Select Weight:</label>
+                    <select id="weight-raggi-rava" class="weight-select">
+                        <option value="1kg-80">1kg - ₹80</option>
+                        <option value="500g-55">500g - ₹55</option>
+                    </select>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product-item">
+                    <img src="images/logo.jpeg" alt="Product Logo" class="product-logo">
+                    <h3>Sajjulu Rava</h3>
+                    <p>Price: ₹90 (1kg), ₹55 (500g)</p>
+                    <label for="weight-sajjulu-rava">Select Weight:</label>
+                    <select id="weight-sajjulu-rava" class="weight-select">
+                        <option value="1kg-90">1kg - ₹90</option>
+                        <option value="500g-55">500g - ₹55</option>
+                    </select>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product-item">
+                    <img src="images/logo.jpeg" alt="Product Logo" class="product-logo">
+                    <h3>Jonnalu Rava</h3>
+                    <p>Price: ₹100 (1kg), ₹75 (500g)</p>
+                    <label for="weight-jonnalu-rava">Select Weight:</label>
+                    <select id="weight-jonnalu-rava" class="weight-select">
+                        <option value="1kg-100">1kg - ₹100</option>
+                        <option value="500g-75">500g - ₹75</option>
+                    </select>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product-item">
+                    <img src="images/logo.jpeg" alt="Product Logo" class="product-logo">
+                    <h3>Korralu Rava</h3>
+                    <p>Price: ₹100 (1kg), ₹60 (500g)</p>
+                    <label for="weight-korralu-rava">Select Weight:</label>
+                    <select id="weight-korralu-rava" class="weight-select">
+                        <option value="1kg-100">1kg - ₹100</option>
+                        <option value="500g-60">500g - ₹60</option>
+                    </select>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product-item">
+                    <img src="images/logo.jpeg" alt="Product Logo" class="product-logo">
+                    <h3>Samallu Rava</h3>
+                    <p>Price: ₹140 (1kg), ₹85 (500g)</p>
+                    <label for="weight-samallu-rava">Select Weight:</label>
+                    <select id="weight-samallu-rava" class="weight-select">
+                        <option value="1kg-140">1kg - ₹140</option>
+                        <option value="500g-85">500g - ₹85</option>
+                    </select>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product-item">
+                    <img src="images/logo.jpeg" alt="Product Logo" class="product-logo">
+                    <h3>Udhallu Rava</h3>
+                    <p>Price: ₹140 (1kg), ₹95 (500g)</p>
+                    <label for="weight-udhallu-rava">Select Weight:</label>
+                    <select id="weight-udhallu-rava" class="weight-select">
+                        <option value="1kg-140">1kg - ₹140</option>
+                        <option value="500g-95">500g - ₹95</option>
+                    </select>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product-item">
+                    <img src="images/logo.jpeg" alt="Product Logo" class="product-logo">
+                    <h3>Arkellu Rava</h3>
+                    <p>Price: ₹140 (1kg), ₹85 (500g)</p>
+                    <label for="weight-arkellu-rava">Select Weight:</label>
+                    <select id="weight-arkellu-rava" class="weight-select">
+                        <option value="1kg-140">1kg - ₹140</option>
+                        <option value="500g-85">500g - ₹85</option>
+                    </select>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product-item">
+                    <img src="images/logo.jpeg" alt="Product Logo" class="product-logo">
+                    <h3>Razma Rava</h3>
+                    <p>Price: ₹200 (1kg), ₹115 (500g)</p>
+                    <label for="weight-razma-rava">Select Weight:</label>
+                    <select id="weight-razma-rava" class="weight-select">
+                        <option value="1kg-200">1kg - ₹200</option>
+                        <option value="500g-115">500g - ₹115</option>
+                    </select>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product-item">
+                    <img src="images/logo.jpeg" alt="Product Logo" class="product-logo">
+                    <h3>Flex Seeds Rava</h3>
+                    <p>Price: ₹220 (1kg), ₹125 (500g)</p>
+                    <label for="weight-flex-seeds-rava">Select Weight:</label>
+                    <select id="weight-flex-seeds-rava" class="weight-select">
+                        <option value="1kg-220">1kg - ₹220</option>
+                        <option value="500g-125">500g - ₹125</option>
+                    </select>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+        </section>
+        <section class="products">
+            <h2>Seeds</h2>
+            <div class="product-list">
+                <div class="product-item">
+                    <img src="images/logo.jpeg" alt="Product Logo" class="product-logo">
+                    <h3>Flex Seeds</h3>
+                    <p>Rich in omega-3 fatty acids and fiber.</p>
+                    <p>Price: ₹200 (1kg), ₹110 (500g)</p>
+                    <label for="weight-flex-seeds">Select Weight:</label>
+                    <select id="weight-flex-seeds" class="weight-select">
+                        <option value="1kg-200">1kg - ₹200</option>
+                        <option value="500g-110">500g - ₹110</option>
+                    </select>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product-item">
+                    <img src="images/logo.jpeg" alt="Product Logo" class="product-logo">
+                    <h3>Sunflower Seeds</h3>
+                    <p>Rich in vitamins and minerals, great for snacks.</p>
+                    <p>Price: ₹150 (1kg), ₹90 (500g)</p>
+                    <label for="weight-sunflower-seeds">Select Weight:</label>
+                    <select id="weight-sunflower-seeds" class="weight-select">
+                        <option value="1kg-150">1kg - ₹150</option>
+                        <option value="500g-90">500g - ₹90</option>
+                    </select>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product-item">
+                    <img src="images/logo.jpeg" alt="Product Logo" class="product-logo">
+                    <h3>Pumpkin Seeds</h3>
+                    <p>Price: ₹560 (1kg), ₹280 (500g), ₹140 (250g)</p>
+                    <label for="weight-pumpkin-seeds">Select Weight:</label>
+                    <select id="weight-pumpkin-seeds" class="weight-select">
+                        <option value="1kg-560">1kg - ₹560</option>
+                        <option value="500g-280">500g - ₹280</option>
+                        <option value="250g-140">250g - ₹140</option>
+                    </select>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product-item">
+                    <img src="images/logo.jpeg" alt="Product Logo" class="product-logo">
+                    <h3>Chia Seeds</h3>
+                    <p>Price: ₹596 (1kg), ₹298 (500g), ₹149 (250g)</p>
+                    <label for="weight-chia-seeds">Select Weight:</label>
+                    <select id="weight-chia-seeds" class="weight-select">
+                        <option value="1kg-596">1kg - ₹596</option>
+                        <option value="500g-298">500g - ₹298</option>
+                        <option value="250g-149">250g - ₹149</option>
+                    </select>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product-item">
+                    <img src="images/logo.jpeg" alt="Product Logo" class="product-logo">
+                    <h3>Almonds (Bhadam)</h3>
+                    <p>Price: ₹960 (1kg), ₹480 (500g), ₹240 (250g)</p>
+                    <label for="weight-almonds">Select Weight:</label>
+                    <select id="weight-almonds" class="weight-select">
+                        <option value="1kg-960">1kg - ₹960</option>
+                        <option value="500g-480">500g - ₹480</option>
+                        <option value="250g-240">250g - ₹240</option>
+                    </select>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product-item">
+                    <img src="images/logo.jpeg" alt="Product Logo" class="product-logo">
+                    <h3>Cashews</h3>
+                    <p>Price: ₹960 (1kg), ₹480 (500g), ₹240 (250g)</p>
+                    <label for="weight-cashews">Select Weight:</label>
+                    <select id="weight-cashews" class="weight-select">
+                        <option value="1kg-960">1kg - ₹960</option>
+                        <option value="500g-480">500g - ₹480</option>
+                        <option value="250g-240">250g - ₹240</option>
+                    </select>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product-item">
+                    <img src="images/logo.jpeg" alt="Product Logo" class="product-logo">
+                    <h3>Pistachios (Pista)</h3>
+                    <p>Price: ₹960 (1kg), ₹480 (500g), ₹240 (250g)</p>
+                    <label for="weight-pistachios">Select Weight:</label>
+                    <select id="weight-pistachios" class="weight-select">
+                        <option value="1kg-960">1kg - ₹960</option>
+                        <option value="500g-480">500g - ₹480</option>
+                        <option value="250g-240">250g - ₹240</option>
+                    </select>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product-item">
+                    <img src="images/logo.jpeg" alt="Product Logo" class="product-logo">
+                    <h3>Razma</h3>
+                    <p>Price: ₹200 (1kg), ₹100 (500g), ₹50 (250g)</p>
+                    <label for="weight-razma">Select Weight:</label>
+                    <select id="weight-razma" class="weight-select">
+                        <option value="1kg-200">1kg - ₹200</option>
+                        <option value="500g-100">500g - ₹100</option>
+                        <option value="250g-50">250g - ₹50</option>
+                    </select>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product-item">
+                    <img src="images/logo.jpeg" alt="Product Logo" class="product-logo">
+                    <h3>Bobbaralu</h3>
+                    <p>Price: ₹180 (1kg), ₹90 (500g), ₹45 (250g)</p>
+                    <label for="weight-bobbaralu">Select Weight:</label>
+                    <select id="weight-bobbaralu" class="weight-select">
+                        <option value="1kg-180">1kg - ₹180</option>
+                        <option value="500g-90">500g - ₹90</option>
+                        <option value="250g-45">250g - ₹45</option>
+                    </select>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product-item">
+                    <img src="images/logo.jpeg" alt="Product Logo" class="product-logo">
+                    <h3>Pasaralu</h3>
+                    <p>Price: ₹180 (1kg), ₹90 (500g), ₹45 (250g)</p>
+                    <label for="weight-pasaralu">Select Weight:</label>
+                    <select id="weight-pasaralu" class="weight-select">
+                        <option value="1kg-180">1kg - ₹180</option>
+                        <option value="500g-90">500g - ₹90</option>
+                        <option value="250g-45">250g - ₹45</option>
+                    </select>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product-item">
+                    <img src="images/logo.jpeg" alt="Product Logo" class="product-logo">
+                    <h3>Kandulu</h3>
+                    <p>Price: ₹180 (1kg), ₹90 (500g), ₹45 (250g)</p>
+                    <label for="weight-kandulu">Select Weight:</label>
+                    <select id="weight-kandulu" class="weight-select">
+                        <option value="1kg-180">1kg - ₹180</option>
+                        <option value="500g-90">500g - ₹90</option>
+                        <option value="250g-45">250g - ₹45</option>
+                    </select>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product-item">
+                    <img src="images/logo.jpeg" alt="Product Logo" class="product-logo">
+                    <h3>Minummulu</h3>
+                    <p>Price: ₹180 (1kg), ₹90 (500g), ₹45 (250g)</p>
+                    <label for="weight-minummulu">Select Weight:</label>
+                    <select id="weight-minummulu" class="weight-select">
+                        <option value="1kg-180">1kg - ₹180</option>
+                        <option value="500g-90">500g - ₹90</option>
+                        <option value="250g-45">250g - ₹45</option>
+                    </select>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product-item">
+                    <img src="images/logo.jpeg" alt="Product Logo" class="product-logo">
+                    <h3>Nalla Ulavallu</h3>
+                    <p>Price: ₹180 (1kg), ₹90 (500g), ₹45 (250g)</p>
+                    <label for="weight-nalla-ulavallu">Select Weight:</label>
+                    <select id="weight-nalla-ulavallu" class="weight-select">
+                        <option value="1kg-180">1kg - ₹180</option>
+                        <option value="500g-90">500g - ₹90</option>
+                        <option value="250g-45">250g - ₹45</option>
+                    </select>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product-item">
+                    <img src="images/logo.jpeg" alt="Product Logo" class="product-logo">
+                    <h3>Ulavallu</h3>
+                    <p>Price: ₹180 (1kg), ₹90 (500g), ₹45 (250g)</p>
+                    <label for="weight-ulavallu">Select Weight:</label>
+                    <select id="weight-ulavallu" class="weight-select">
+                        <option value="1kg-180">1kg - ₹180</option>
+                        <option value="500g-90">500g - ₹90</option>
+                        <option value="250g-45">250g - ₹45</option>
+                    </select>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product-item">
+                    <img src="images/logo.jpeg" alt="Product Logo" class="product-logo">
+                    <h3>Wheat</h3>
+                    <p>Price: ₹180 (1kg), ₹90 (500g), ₹45 (250g)</p>
+                    <label for="weight-wheat">Select Weight:</label>
+                    <select id="weight-wheat" class="weight-select">
+                        <option value="1kg-180">1kg - ₹180</option>
+                        <option value="500g-90">500g - ₹90</option>
+                        <option value="250g-45">250g - ₹45</option>
+                    </select>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+        </section>
+        <section class="products">
+            <h2>Powders</h2>
+            <div class="product-list">
+                <div class="product-item">
+                    <img src="images/logo1.jpeg" alt="Product Logo" class="product-logo">
+                    <h3>Kandi Podi</h3>
+                    <p>Price: ₹180 (250g), ₹100 (100g)</p>
+                    <label for="weight-kandi-podi">Select Weight:</label>
+                    <select id="weight-kandi-podi" class="weight-select">
+                        <option value="250g-180">250g - ₹180</option>
+                        <option value="100g-100">100g - ₹100</option>
+                    </select>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product-item">
+                    <img src="images/logo1.jpeg" alt="Product Logo" class="product-logo">
+                    <h3>Nuvvulu Podi</h3>
+                    <p>Price: ₹180 (250g), ₹100 (100g)</p>
+                    <label for="weight-nuvvulu-podi">Select Weight:</label>
+                    <select id="weight-nuvvulu-podi" class="weight-select">
+                        <option value="250g-180">250g - ₹180</option>
+                        <option value="100g-100">100g - ₹100</option>
+                    </select>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product-item">
+                    <img src="images/logo1.jpeg" alt="Product Logo" class="product-logo">
+                    <h3>Mulaga Aku Podi</h3>
+                    <p>Price: ₹200 (250g), ₹80 (100g)</p>
+                    <label for="weight-mulaga-aku-podi">Select Weight:</label>
+                    <select id="weight-mulaga-aku-podi" class="weight-select">
+                        <option value="250g-200">250g - ₹200</option>
+                        <option value="100g-80">100g - ₹80</option>
+                    </select>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product-item">
+                    <img src="images/logo1.jpeg" alt="Product Logo" class="product-logo">
+                    <h3>Kariyapaku Podi</h3>
+                    <p>Price: ₹160 (250g), ₹70 (100g)</p>
+                    <label for="weight-kariyapaku-podi">Select Weight:</label>
+                    <select id="weight-kariyapaku-podi" class="weight-select">
+                        <option value="250g-160">250g - ₹160</option>
+                        <option value="100g-70">100g - ₹70</option>
+                    </select>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product-item">
+                    <img src="images/logo1.jpeg" alt="Product Logo" class="product-logo">
+                    <h3>Dhaniyalu Podi</h3>
+                    <p>Price: ₹160 (250g), ₹70 (100g)</p>
+                    <label for="weight-dhaniyalu-podi">Select Weight:</label>
+                    <select id="weight-dhaniyalu-podi" class="weight-select">
+                        <option value="250g-160">250g - ₹160</option>
+                        <option value="100g-70">100g - ₹70</option>
+                    </select>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product-item">
+                    <img src="images/logo1.jpeg" alt="Product Logo" class="product-logo">
+                    <h3>Menthu Podi</h3>
+                    <p>Price: ₹160 (250g), ₹70 (100g)</p>
+                    <label for="weight-menthu-podi">Select Weight:</label>
+                    <select id="weight-menthu-podi" class="weight-select">
+                        <option value="250g-160">250g - ₹160</option>
+                        <option value="100g-70">100g - ₹70</option>
+                    </select>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product-item">
+                    <img src="images/logo1.jpeg" alt="Product Logo" class="product-logo">
+                    <h3>Jerrakara Podi</h3>
+                    <p>Price: ₹260 (250g), ₹120 (100g)</p>
+                    <label for="weight-jerrakara-podi">Select Weight:</label>
+                    <select id="weight-jerrakara-podi" class="weight-select">
+                        <option value="250g-260">250g - ₹260</option>
+                        <option value="100g-120">100g - ₹120</option>
+                    </select>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div><div class="product-item">
+                    <img src="images/logo1.jpeg" alt="Product Logo" class="product-logo">
+                    <h3>Idlykarram Podi</h3>
+                    <p>Price: ₹130 (250g), ₹60 (100g)</p>
+                    <label for="weight-jerrakara-podi">Select Weight:</label>
+                    <select id="weight-jerrakara-podi" class="weight-select">
+                        <option value="250g-260">250g - ₹130</option>
+                        <option value="100g-120">100g - ₹60</option>
+                    </select>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Harika Millet Powders. All rights reserved.</p>
+        <p>Developed by: CraftyTech.Ai Digital Solutions</p>
+    </footer>
+    <footer class="site-footer">
+    <div class="footer-container">
+        <p>Contact us: <a href="tel:+919701187805">+91 97011 87805</a></p>
+    </div>
+</footer>
+    <script src="script.js" defer></script>
+</body>
+</html>
