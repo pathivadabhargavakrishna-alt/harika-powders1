@@ -36,13 +36,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Fetch the latest bag data from localStorage
         const bag = JSON.parse(localStorage.getItem('bag')) || [];
-        console.log('Updating bag display with items:', bag);
+        console.log('Bag data from localStorage:', bag);
 
-        if (!bagItemsContainer) return;
+        if (!bagItemsContainer) {
+            console.error('Bag items container not found in the DOM.');
+            return;
+        }
 
         bagItemsContainer.innerHTML = '';
 
         if (bag.length === 0) {
+            console.warn('Bag is empty. Displaying empty message.');
             bagItemsContainer.innerHTML = '<li>Your bag is empty.</li>';
             totalItemsElement.textContent = '0';
             totalPriceElement.textContent = '0.00';
