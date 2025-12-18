@@ -1,36 +1,53 @@
 document.addEventListener('DOMContentLoaded', () => {
+    console.log('DOM fully loaded and parsed');
 
-    /* =========================
-       HELPERS
-    ========================= */
+    const bagItemsContainer = document.querySelector('.bag-items');
+    const totalItemsElement = document.getElementById('total-items');
+    const totalPriceElement = document.getElementById('total-price');
 
-    function getBag() {
-        return JSON.parse(localStorage.getItem('bag')) || [];
+    const bag = JSON.parse(localStorage.getItem('bag')) || [];
+
+    if (!bag.length) {
+        console.log('Bag is empty or localStorage is not working.');
+        alert('Your cart is empty. Please add items again.');
     }
 
-    function saveBag(bag) {
-        localStorage.setItem('bag', JSON.stringify(bag));
-    }
+    // Example bag items (replace with dynamic data)
+    const bagItems = [
+        { name: "Product 1", price: 10.99, quantity: 2 },
+        { name: "Product 2", price: 5.49, quantity: 1 },
+        { name: "Product 3", price: 7.99, quantity: 3 },
+        { name: "Product 4", price: 12.49, quantity: 1 },
+        { name: "Product 5", price: 3.99, quantity: 5 },
+        { name: "Product 6", price: 8.99, quantity: 2 },
+        { name: "Product 7", price: 6.49, quantity: 4 },
+        { name: "Product 8", price: 9.99, quantity: 1 },
+        { name: "Product 9", price: 4.99, quantity: 6 },
+        { name: "Product 10", price: 11.99, quantity: 2 },
+        { name: "Product 11", price: 14.99, quantity: 1 },
+        { name: "Product 12", price: 2.99, quantity: 7 }
+    ];
 
-    /* =========================
-       UPDATE CART UI
-    ========================= */
-
+    // Function to update the bag display
     function updateBagDisplay() {
-        const bagItemsContainer = document.getElementById('bag-items');
+        const bagItemsContainer = document.querySelector('.bag-items');
         const totalItemsElement = document.getElementById('total-items');
         const totalPriceElement = document.getElementById('total-price');
 
-        // If not cart page, safely exit
-        if (!bagItemsContainer || !totalItemsElement || !totalPriceElement) {
+        // Fetch the latest bag data from localStorage
+        const bag = JSON.parse(localStorage.getItem('bag')) || [];
+        console.log('Bag data from localStorage:', bag);
+
+        if (!bagItemsContainer) {
+            console.error('Bag items container not found in the DOM.');
             return;
         }
 
-        const bag = getBag();
         bagItemsContainer.innerHTML = '';
 
         if (bag.length === 0) {
-            bagItemsContainer.innerHTML = '<li>Your cart is empty</li>';
+            console.warn('Bag is empty. Displaying empty message.');
+            bagItemsContainer.innerHTML = '<li>Your bag is empty.</li>';
             totalItemsElement.textContent = '0';
             totalPriceElement.textContent = '0.00';
             return;
@@ -39,117 +56,100 @@ document.addEventListener('DOMContentLoaded', () => {
         let totalItems = 0;
         let totalPrice = 0;
 
-        bag.forEach((item, index) => {
-            const li = document.createElement('li');
-            li.className = 'bag-item';
+        bag.forEach((product) => {
+            const bagItem = document.createElement('li');
+            bagItem.classList.add('bag-item');
 
-            li.innerHTML = `
-                <img src="${item.image}" width="60" alt="${item.name}">
+            bagItem.innerHTML = `
+                <img src="${product.image}" alt="${product.name}" style="width: 50px; height: 50px; margin-right: 10px;">
                 <div>
-                    <h4>${item.name}</h4>
-                    <p>${item.description}</p>
-                    <p>Weight: ${item.weight}</p>
-                    <strong>₹${item.price}</strong>
-                    <br>
-                    <button class="remove-item" data-index="${index}">
-                        Remove
-                    </button>
+                    <h4>${product.name}</h4>
+                    <p>${product.description}</p>
+                    <p>Weight: ${product.weight}</p>
+                    <p>Price: ₹${product.price}</p>
                 </div>
             `;
 
-            bagItemsContainer.appendChild(li);
-            totalItems++;
-            totalPrice += item.price;
+            bagItemsContainer.appendChild(bagItem);
+
+            totalItems += 1;
+            totalPrice += product.price;
         });
 
         totalItemsElement.textContent = totalItems;
         totalPriceElement.textContent = totalPrice.toFixed(2);
     }
 
-    /* =========================
-       ADD TO CART
-    ========================= */
-
-    document.body.addEventListener('click', (e) => {
-
-        /* ---- ADD ITEM ---- */
-        if (e.target.classList.contains('add-to-cart')) {
-
-            const product = e.target.closest('.product');
-            if (!product) return;
-
-            const weightSelect = product.querySelector('.weight-select');
+    // Event delegation for "Add to Cart" buttons
+    document.body.addEventListener('click', (event) => {
+        if (event.target.classList.contains('add-to-cart')) {
+            console.log('Add to Cart button clicked');
+            const button = event.target;
+            const productItem = button.parentElement;
+            const productName = productItem.querySelector('h3').innerText;
+            const productDescription = productItem.querySelector('p').innerText;
+            const productImage = productItem.querySelector('img').src;
+            const weightSelect = productItem.querySelector('.weight-select');
             const [weight, price] = weightSelect.value.split('-');
 
-            const item = {
-                name: product.querySelector('h3').innerText,
-                description: product.querySelector('p').innerText,
-                image: product.querySelector('img').src,
+            const product = {
+                name: productName,
+                description: productDescription,
+                image: productImage,
                 weight: weight,
-                price: Number(price)
+                price: parseInt(price, 10)
             };
 
-            const bag = getBag();
-            bag.push(item);
-            saveBag(bag);
-
-            alert('Item added to cart');
-            updateBagDisplay();
-        }
-
-        /* ---- REMOVE ITEM ---- */
-        if (e.target.classList.contains('remove-item')) {
-            const index = e.target.dataset.index;
-            const bag = getBag();
-            bag.splice(index, 1);
-            saveBag(bag);
-            updateBagDisplay();
+            try {
+                const bag = JSON.parse(localStorage.getItem('bag')) || [];
+                bag.push(product);
+                localStorage.setItem('bag', JSON.stringify(bag));
+                console.log(`${productName} (${weight}) added to bag for ₹${price}.`);
+                alert(`${productName} (${weight}) has been added to your bag for ₹${price}.`);
+                updateBagDisplay();
+            } catch (error) {
+                console.error('Error adding to cart:', error);
+                alert('Unable to add item to cart. Please try again.');
+            }
         }
     });
 
-    /* =========================
-       WHATSAPP ORDER
-    ========================= */
-
+    // Function to send bag details to WhatsApp
     function sendBagToWhatsApp() {
-        const bag = getBag();
         if (bag.length === 0) {
-            alert('Your cart is empty');
+            alert('Your bag is empty!');
             return;
         }
 
-        let message = '🛒 *New Order Request* \n\n';
+        let message = 'Hello, I would like to order the following items:\n';
 
-        bag.forEach((item, i) => {
-            message += `${i + 1}. ${item.name}\n`;
-            message += `   ${item.weight} - ₹${item.price}\n\n`;
+        bag.forEach((product, index) => {
+            message += `${index + 1}. ${product.name} - ${product.description} (Weight: ${product.weight}, Price: ₹${product.price})\n`;
         });
 
-        const total = bag.reduce((sum, i) => sum + i.price, 0);
-        message += `💰 *Total: ₹${total}*`;
-
-        const phone = '919701187805'; // change if needed
-        const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
-        window.open(url, '_blank');
+        const whatsappUrl = `https://wa.me/919701187805?text=${encodeURIComponent(message)}`;
+        window.open(whatsappUrl, '_blank');
     }
 
-    /* =========================
-       WHATSAPP BUTTON
-    ========================= */
-
+    // Add WhatsApp button to the bag section
     const bagSection = document.querySelector('.bag');
-    if (bagSection) {
-        const btn = document.createElement('button');
-        btn.textContent = 'Order via WhatsApp';
-        btn.className = 'whatsapp-button';
-        btn.addEventListener('click', sendBagToWhatsApp);
-        bagSection.appendChild(btn);
+    const whatsappButton = document.createElement('button');
+    whatsappButton.innerText = 'Order via WhatsApp';
+    whatsappButton.classList.add('whatsapp-button');
+    whatsappButton.addEventListener('click', sendBagToWhatsApp);
+    bagSection.appendChild(whatsappButton);
+
+    // Initial bag display
+    console.log('Current bag contents:', bag);
+    if (window.location.pathname.includes('bag.html')) {
+        console.log('Bag page detected. Updating bag display.');
+        updateBagDisplay();
     }
 
-    /* =========================
-       INITIAL LOAD
-    ========================= */
+    // Ensure the bag display updates on bag.html page load
+    if (window.location.pathname.includes('bag.html')) {
+        document.addEventListener('DOMContentLoaded', updateBagDisplay);
+    }
 
-    updateBagDisplay();
-
+    updateBagUI();
 });
